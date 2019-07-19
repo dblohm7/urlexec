@@ -1,1 +1,2 @@
 BIN_NAME = urlexec
+IMPLIBS = wininet.lib ole32.lib shell32.lib
