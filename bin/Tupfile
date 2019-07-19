@@ -3,4 +3,5 @@
 # file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
 .gitignore
-: ../obj/*.obj | ../obj/*.pdb |> cl -Zi -MD %f -FS -Fd%O.pdb -Fe%o -link -manifestinput:../src/compatibility.manifest -manifest:embed |> $(BIN_NAME).exe | %O.pdb %O.ilk
+include_rules
+: ../obj/*.obj | ../obj/*.pdb |> cl -Zi -MD %f -Fd%O.pdb -Fe%o -link -manifestinput:../src/compatibility.manifest -manifest:embed |> $(BIN_NAME).exe | %O.pdb %O.ilk
